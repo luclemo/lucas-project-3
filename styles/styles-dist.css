@@ -1,0 +1,308 @@
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+audio, canvas, video {
+  display: inline-block; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+[hidden] {
+  display: none; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+a:focus {
+  outline: thin dotted; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+a:active, a:hover {
+  outline: 0; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+h1 {
+  font-size: 2em; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+b, strong {
+  font-weight: 700; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+dfn {
+  font-style: italic; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+q {
+  quotes: \201C \201D \2018 \2019; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+small {
+  font-size: 80%; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+sup {
+  top: -0.5em; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+sub {
+  bottom: -0.25em; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+img {
+  border: 0; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+/* line 1, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+button, input {
+  line-height: normal; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+button[disabled], input[disabled] {
+  cursor: default; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+body, figure {
+  margin: 0; }
+
+/* line 2, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 4, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+/* line 6, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/reset */
+* {
+  box-sizing: border-box; }
+
+/* line 8, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+html {
+  font-size: 10px; }
+
+/* line 12, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  font-size: 1.6rem;
+  color: #828282; }
+
+/* line 21, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+h1, h2 {
+  font-weight: 300; }
+
+/* line 24, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+h1 {
+  font-size: 4.8rem; }
+
+/* line 28, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+h2 {
+  font-size: 2.8rem; }
+
+/* line 32, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.hero-section header {
+  background: salmon; }
+
+/* line 36, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 42, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+a {
+  text-decoration: none;
+  color: inherit; }
+
+/* line 51, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.full {
+  width: 100%;
+  background: darksalmon; }
+
+/* line 56, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.container {
+  max-width: 940px;
+  background: mistyrose;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 62, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.row {
+  width: 100%;
+  background: lavender; }
+  /* line 9, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/mixins */
+  .row::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* line 69, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.col-a {
+  width: 65.957446809%;
+  background: gold; }
+
+/* line 74, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.col-b {
+  width: 31.914893617%;
+  background: skyblue;
+  float: left;
+  margin-right: 2.127659574%; }
+  /* line 80, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+  .col-b:nth-of-type(3n) {
+    margin-right: 0; }
+
+/* line 85, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.col-c {
+  width: 48.936170213%;
+  float: left;
+  background: darkseagreen; }
+
+/* line 98, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.hero-section {
+  padding-top: 30px; }
+
+/* line 9, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/mixins */
+.site-header::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+/* line 107, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.home {
+  float: left;
+  background: darkkhaki; }
+
+/* line 113, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.site-title, .tagline {
+  color: white;
+  margin: 0; }
+
+/* line 118, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.site-title {
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  margin: 0; }
+
+/* line 125, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.tagline {
+  font-size: 1.2rem; }
+
+/* line 132, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.main-nav {
+  float: right;
+  width: 70%; }
+
+/* line 137, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.menu {
+  text-align: right; }
+  /* line 140, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+  .menu li {
+    display: inline-block;
+    margin-left: 2%; }
+    /* line 144, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+    .menu li a {
+      padding: 0.4rem 1.8rem;
+      display: block;
+      font-size: 1.4rem;
+      color: white; }
+    /* line 151, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+    .menu li:last-child {
+      padding-right: 0; }
+    /* line 155, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+    .menu li.current-item a {
+      border: 1px solid;
+      border-radius: 5px; }
+
+/* line 165, /Users/Lucas/Dropbox/HackerYou/Week 3/project-3/scss/styles.scss */
+.hero, .scroll {
+  text-align: center; }
+/*# sourceMappingURL=styles-dist.css.map */

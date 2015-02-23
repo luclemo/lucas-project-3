@@ -1,0 +1,751 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+
+// ---------------------------------
+// Deafults
+// ---------------------------------
+html {
+	font-size: 10px;
+}
+
+body {
+	font-family: $lato;
+	font-weight: $normal;
+	line-height: 1.65;
+	font-size: 1.6rem;
+	color: $type;
+	-webkit-font-smoothing: antialiased;
+}
+
+p {
+	margin-top: 0;
+	font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-weight: $normal;
+}
+
+h1 {
+	font-size: 4.8rem;
+}
+
+h2 {
+	font-size: 2.8rem;
+	margin-bottom: 0.3rem;
+	letter-spacing: 0.12rem;
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 0.3rem;
+}
+
+h4 {
+	font-size: 1.8rem;
+	font-weight: $normal;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.btn {
+	@include button;
+}
+
+.hero .btn,
+.cta .btn {
+	color: rgba(255,255,255,1);
+
+	&:hover {
+		border-color: $accent;
+		background:$accent;
+	} 
+}
+
+.blog .btn:hover,
+.post .btn:hover,
+.contact-form input[type=submit]:hover {
+	color: rgba(255,255,255,1);
+	border-color: $accent;
+	background:$accent;
+}
+
+img {
+	max-width:100% ;
+}
+
+a:hover,
+.btn:hover {
+	transition: all 0.3s;
+}
+
+
+// ---------------------------------
+// Layout
+// ---------------------------------
+
+.full {
+	width: 100%; // full width of browser
+}
+
+section.full {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+section.blog,
+section.skills,
+section.subscribe {
+	background: $softbg;
+}
+
+section:not(.hero-section),
+footer {
+	padding: 60px 0;
+}
+
+.container {
+	max-width: 940px; //content wrapper (holds the stuff)
+	@include horizontal;
+}
+
+.row {
+	width: 100%; // makes the stuff full width inside container
+	@include clearfix;
+}
+
+.col-a {
+	width: 65.957446809%;
+}
+
+header.col-a {
+	float: left;
+}
+
+.col-b {
+	width: 31.914893617%;
+	float: left;
+	margin-right: 2.127659574468085%;
+	
+	&:nth-of-type(3n) {
+		margin-right: 0;
+	}
+}
+
+.col-c {
+	width: 48.936170213%;
+	float: left;
+}
+
+.blog-cta.col-b,
+.skill-items.col-b {
+	text-align: right;
+}
+
+// ---------------------------------
+// Header + Hero
+// ---------------------------------
+
+// Structure
+
+.hero-section {
+	padding: 30px 0;
+	background:rgba(0,0,0,0.3);
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background:url('../assets/images/pool.JPG');
+		opacity: 1;
+	}
+}
+
+.site-header {
+	@include clearfix;
+}
+
+// Logo (home link)
+.home {
+	float: left;
+}
+
+.site-title,
+.tagline {
+	color: rgba(255,255,255,1);
+	margin: 0;
+}
+
+.site-title {
+	text-transform: uppercase;
+	font-size: 3.2rem;
+	letter-spacing: 0.2rem;
+	line-height: 1;
+	margin: 0;
+	position: relative;
+
+	&:after {
+		content:'';
+		height: 5px;
+		width: 5px;
+		background: $accent;
+		position: absolute;
+		bottom: 4px;
+		right: -8px;
+	}
+}
+
+.tagline {
+	font-size: 1.2rem;
+}
+
+// Site Nav
+.burg {
+	display: none; //hide mobile trigger on desktop
+
+}
+
+.main-nav {
+	float: right;
+	width: 80%;
+}
+
+.menu {
+	text-align: right;
+
+	li {
+		display: inline-block;
+		margin-left: 2%;
+		
+		a {
+			padding: 0.4rem 1.8rem;
+			display: block;
+			color: rgba(255,255,255,0.7);
+
+			&:hover {
+				color: rgba(255,255,255,1);
+			}
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		&.current-item a {
+			// color: rgba(255,255,255,1);
+			@extend a:hover;
+			@include rounded;
+			border: 1px solid;
+		}
+
+		&.menu-cta a {
+			color: rgba(255,255,255,1);
+			text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+			@include rounded;
+			border:1px solid $accent;
+			padding: 0.5rem 1rem;
+			background:$accent;
+			box-shadow:0 -1px 0 lighten($accent, 30%);
+
+			&:hover {
+				color: $accent;
+				background:transparent;
+				box-shadow: none;
+
+			}
+		}
+	}
+}
+
+// Hero
+.hero,
+.scroll {
+	text-align: center;
+}
+
+.hero {
+	padding: 100px 10% 20px 10%;
+
+	h2 {
+		font-size: 5rem;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+		color: rgba(255,255,255,1);
+		font-weight: $light;
+	}
+}
+
+.sub-heading {
+	margin-top: 0;
+	font-size: 2.3rem;
+	letter-spacing: 0.02rem;
+}
+
+.scroll {
+	color: rgba(255,255,255,1);
+	text-align: center;
+	margin-top: 40px;
+
+	a:after {
+	content:'↓';
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border-radius: 50%;
+	border: 1px solid;
+	display: block;
+	padding: 0.5rem;
+	margin: 10px auto 0 auto;
+	transition: all 0.2s;
+	}
+
+	a:hover:after {
+		transform: translateY(15%);
+		color: rgba(255,255,255,1);
+	}
+}
+
+// ---------------------------------
+// Services
+// ---------------------------------
+ .service {
+ 	padding: 0 0 1% 10%;
+ 	background-position: 0 30px;
+ 	background-repeat: no-repeat;
+
+ 	p {
+ 		font-size: 1.4rem;
+ 		line-height: 1.3;
+ 	}
+}
+
+.service-window {
+	background-image:url('../assets/services-icons/1.png');
+}
+
+.service-home {
+	background-image:url('../assets/services-icons/2.png');
+}
+
+.service-people {
+	background-image:url('../assets/services-icons/3.png');
+}
+
+.service-stars {
+	background-image:url('../assets/services-icons/4.png');
+}
+
+.service-heart {
+	background-image:url('../assets/services-icons/5.png');
+}
+
+.service-support {
+	background-image:url('../assets/services-icons/6.png');
+}
+
+// ---------------------------------
+// Blog
+// ---------------------------------
+
+// General button style for section
+.blog .btn {
+	color: $accent;
+}
+
+// Blog call to action
+.blog-cta {
+	float: right;
+	margin-right: 0;
+	padding-top: 50px;
+
+	.btn {
+		text-transform: uppercase;
+	}
+}
+
+// Posts section
+.posts {
+	margin-top: 30px;
+}
+
+.post {
+	@include rounded;
+	background:rgba(255,255,255,1);
+
+	.btn {
+		padding: 0.5rem 1rem;
+		font-size: 1.4rem;
+	}
+}
+
+.post-img { 
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.post-content {
+	padding: 5%;
+	padding-top: 0;
+
+	h3 {
+		margin-top: 10px;
+	}
+	
+	p {
+		font-size: 1.6rem;
+	}
+}
+
+// ---------------------------------
+// Call to action
+// ---------------------------------
+.cta {
+	background:rgba(0,0,0,1) url('../assets/images/stars.jpg') no-repeat;
+	text-align: center;
+
+	h2 {
+		color: rgba(255,255,255,1);
+	}
+
+	h2 {
+		font-size: 4rem;
+		font-weight: $light;
+			em {
+			text-transform: uppercase;
+			font-style: normal;
+			}
+	}
+}
+
+// ---------------------------------
+// Portfolio
+// ---------------------------------
+
+.portfolio .row {
+	position: relative;
+}
+
+// filter div (style the containing div)
+.filter {
+	border: 1px solid $type;
+	border-radius: $brad;
+	position: absolute;
+	right: 0;
+	bottom: 2.4rem;
+	margin-right: 0;
+	background: url(../assets/icons/chevron_down.png) no-repeat 95% center;
+
+}
+// Filter (disbale all styles; style parent)
+select[name="filter"] {
+	-webkit-appearance: none;
+	color: $type;
+	border: none;
+	padding: 1rem;
+	width: 100%; 
+	background: transparent;
+	
+	// Why doesn't this work? -- options cannot be styled.
+	option[selected="selected"] {
+		text-transform: uppercase;
+	}
+	// Why doesn't this work? -- cannot set :after or :before on
+	// form elements or images
+	&:after {
+		content: 'hello';
+	}
+}
+
+.work-item {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.bg {
+	background:$accent;
+	position: relative;
+
+	.fa-search {
+		color: rgba(255,255,255,0.4);
+		border: 5px solid;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+		line-height: 90px;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 35%;
+		opacity: 0;
+	}
+}
+
+.work-img img {
+	display: block;
+	transition: all 0.3s;
+}
+.work-img:hover img {
+	opacity: 0; 
+}
+.bg:hover .fa-search {
+	opacity: 1;
+}
+
+// work category tags
+.work-tags li {
+	display: inline;
+
+	&:after {
+		content: ',';
+	}
+
+	&:last-child:after {
+		content: '';
+	}
+}
+
+// ---------------------------------
+// Skills
+// ---------------------------------
+.skill-items {
+	margin-right: 0;
+	float: right;
+
+	ul {
+		margin-top: 15px;
+	
+		li {
+			@include button;
+		  padding: 1.5rem 1.8rem;
+		  margin: 0 0 6px 6px;
+		  color: $accent;
+
+		}
+	}
+}
+
+// ---------------------------------
+// Twitter
+// ---------------------------------
+.twitter {
+	background:rgba(0,0,0,0.6);
+	position: relative;
+	text-align: center;
+	color: rgba(255,255,255,1);
+
+	&:after {
+		content: '';
+		position: absolute;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		background:url('../assets/images/lights.jpg');
+		opacity: 1;
+	}
+
+	blockquote p {
+		font-size: 2.3rem;
+
+		&:before {
+			content:'“';
+		}
+
+		&:after {
+			content:'”';
+		}
+	}
+}
+
+.twitter-handle h2 {
+	margin-top: 0;
+}
+
+// Trying to get transparent text with white border. Why doesn't this work?
+.fa-twitter {
+	color: rgba(255,255,255,1);
+	//    -webkit-text-stroke-width: 2px;
+	//    -webkit-text-stroke-color: white;
+}
+
+.twitter-link,
+.tweeted {
+	display: block;
+}
+
+.tweeted {
+	color: $accent;
+}
+
+// ---------------------------------
+// Contact
+// ---------------------------------
+
+// Map section
+.map-block {
+	margin-top: 30px;
+	float: left;
+
+// Can't get rounded corners on the map?
+	.map {
+		width: 100%;
+		border-radius: $brad;
+	}
+}
+
+// Contact-form section
+.contact-form-block {
+	float: right;
+}
+
+.contact-form label,
+.contact-form input {
+	display: block;
+	width: 100%;
+}
+
+.contact-form label {
+	color: $accent;
+
+	&[required]:after {
+		content: '*';
+		color:red;
+	}
+}
+
+.contact-form input {
+	@include button;
+	padding-left: 1.8rem;
+	border-color: transparentize($type, 0.5);
+	margin-bottom: 20px;
+
+	&[type=submit] {
+		color:$accent;
+		background:transparent;
+		border-color: $accent;
+		padding-left: 3rem;
+		width: auto;
+		display: inline-block;
+		float: right;
+	}
+}
+
+// Transparentize does not work on placeholder?
+.contact-form ::-webkit-input-placeholder {
+	color: transparentize($type, 0.3);
+	opacity: 0.8;
+}
+
+// contact details
+.contact-details span {
+	color: $accent;
+}
+
+// ---------------------------------
+// Subscribe
+// ---------------------------------
+.subscribe .col-a {
+	margin: 0 auto;
+}
+
+.subscribe form {
+	margin: 20px 0;
+
+	input[type=email] {
+		@include button;
+		padding-left: 1.8rem;
+		border-color: transparentize($type, 0.5);
+		width: 75%;
+	}
+
+	input[type=submit] {
+		width: 20%;
+		float: right;
+		@include button;
+		background:$accent;
+		color: #fff;
+		border-color:$accent;
+	}
+}
+
+// ---------------------------------
+// Footer
+// ---------------------------------
+footer {
+	background:rgba(226, 226, 226, 1);
+}
+.copyright p,
+.social p {
+	font-size: 1.6rem;
+}
+
+.heart {
+	color: red;
+}
+
+.social {
+	text-align: right;
+}
+
+.social p,
+.social ul {
+	display: inline;
+}
+
+.social ul {
+	position: relative;
+	top: 3px;
+}
+
+.social ul li {
+	display: inline;
+	padding: 0 1rem;
+
+	&:last-child {
+		padding-right: 0;
+	}
+
+	a {
+		font-size: 2.8rem;
+	}
+}
+
+.fa-facebook {
+	color: rgba(58, 88, 152, 1);
+}
+.site-footer .fa-twitter {
+	color: rgba(0, 172, 238, 1);
+}
+.fa-github {
+	color: rgba(0,0,0,1);
+}
+.fa-dribbble {
+	color: rgba(233, 68, 132, 1);
+}
+
+
+// ---------------------------------
+// Media Queries
+// ---------------------------------
+
+@import "queries";
